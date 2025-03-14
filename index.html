@@ -3,68 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Manish Reddy | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* CSS styles will go here (or save them in styles.css) */
+        :root {
+            --primary: #2A2A2A;
+            --accent: #2ECC71;
+            --background: #F8F9FA;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
+            background: var(--background);
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--accent) 0%, #27AE60 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skills */
+        .skill-tag {
+            display: inline-block;
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        /* Projects */
+        .project-card {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        .project-card h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <header class="header">
+    <section class="hero">
         <div class="container">
-            <h1>Your Name</h1>
-            <p class="tagline">Web Developer | Designer | Creative Thinker</p>
+            <h1>Manish Reddy</h1>
+            <p>AVP - Business Consulting, HSBC | Analytics Professional with 7.5 years of experience in Banking, Retail, and Pharmaceutical domains.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/manishrdy/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:manishreddy111@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-    </header>
+    </section>
 
     <main class="container">
-        <!-- About Section -->
-        <section class="card">
-            <h2><i class="fas fa-user"></i> About Me</h2>
-            <p>A passionate developer with 3+ years of experience...</p>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="card">
-            <h2><i class="fas fa-code"></i> Skills</h2>
-            <div class="skills">
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Python</span>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="card">
-            <h2><i class="fas fa-briefcase"></i> Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Job Title</h3>
-                    <p class="company">Company Name | 2022-Present</p>
-                    <p>Description of your role and achievements...</p>
+        <div class="card-grid">
+            <!-- Experience Card -->
+            <div class="card">
+                <h2>Professional Experience</h2>
+                <div class="project-card">
+                    <h3>AVP – Business Consulting, HSBC</h3>
+                    <p>February 2024 – Present</p>
+                    <ul>
+                        <li>Explore and identify patterns and risk appetite using Python/SAS.</li>
+                        <li>Setup an on-premise Data Science Workbench Framework.</li>
+                        <li>Manage team deliverables and maintain code hygiene using GitHub.</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h3>Manager – Business Consulting, HSBC</h3>
+                    <p>July 2022 – February 2024</p>
+                    <ul>
+                        <li>Analyzed customer data to identify risk models based on Financial Crime Risk guidance.</li>
+                        <li>Migrated SAS codes to Python, enhancing efficiency and cost savings.</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h3>Consultant, EY</h3>
+                    <p>November 2021 – July 2022</p>
+                    <ul>
+                        <li>Built scalable web applications and worked on SAS to Python migration.</li>
+                        <li>Identified lending fraud using Python, SAS, and SQL.</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h3>Data Scientist, HARMAN</h3>
+                    <p>September 2020 – November 2021</p>
+                    <ul>
+                        <li>Worked on Retail and FMCG market analysis using Python.</li>
+                        <li>Integrated Mainframe-SAS-Python code execution.</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h3>Associate Consultant, IQVIA</h3>
+                    <p>May 2020 – September 2020</p>
+                    <ul>
+                        <li>Analyzed real-time pharmacy data using latest technologies.</li>
+                        <li>Utilized SAS, SQL, and Python for data analysis.</li>
+                    </ul>
+                </div>
+                <div class="project-card">
+                    <h3>Data Analyst, ACCENTURE</h3>
+                    <p>September 2017 – May 2020</p>
+                    <ul>
+                        <li>Handled clinical data for pharmaceutical giants.</li>
+                        <li>Extracted insights using SAS, SQL, and Python.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+
+            <!-- Skills Card -->
+            <div class="card">
+                <h2>Technical Skills</h2>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SAS</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Object-Oriented Programming</span>
+                    <span class="skill-tag">Data Visualization Tools</span>
+                    <span class="skill-tag">NLTK</span>
+                    <span class="skill-tag">Spacy</span>
+                    <span class="skill-tag">Regex</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="card">
+            <h2>Education</h2>
+            <div class="project-card">
+                <h3>B.E in Computer Science & Engineering</h3>
+                <p>CMR Institute of Technology, VTU Affiliated, Bangalore</p>
+                <p>August 2013 – July 2017</p>
+            </div>
+        </div>
 
         <!-- Projects Section -->
-        <section class="card">
-            <h2><i class="fas fa-laptop-code"></i> Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Project Title</h3>
-                    <p>A brief description of your project...</p>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
+        <div class="card">
+            <h2>Featured Projects</h2>
+            <div class="project-card">
+                <h3>Data Science Workbench Framework</h3>
+                <p>Setup an on-premise framework for data science projects.</p>
             </div>
-        </section>
+            <div class="project-card">
+                <h3>SAS to Python Migration</h3>
+                <p>Migrated multiple SAS codes to Python, enhancing efficiency and cost savings.</p>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="container">
             <p>Connect with me: 
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:manishreddy111@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+91-7406658112" target="_blank"><i class="fas fa-phone"></i></a>
             </p>
         </div>
     </footer>
