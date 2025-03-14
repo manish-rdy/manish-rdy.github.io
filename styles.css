@@ -1,0 +1,99 @@
+/* Base Styles */
+:root {
+    --primary: #2A2A2A;
+    --accent: #FF6B6B;
+    --background: #F7FFF7;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: var(--background);
+    color: var(--primary);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skill-tag {
+    background: #FFE66D;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Projects */
+.projects {
+    display: grid;
+    gap: 20px;
+}
+
+.project-card {
+    border-left: 4px solid var(--accent);
+    padding-left: 15px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateX(10px);
+}
+
+.project-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
